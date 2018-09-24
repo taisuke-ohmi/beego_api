@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-
 <html>
-<head>
-  <title>Beego</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-
-<body>
-  <header>
-    <h1 class="logo">Welcome to Beego</h1>
-    <div class="description">
-      Beego is a simple & powerful Go web framework which is inspired by tornado and sinatra.
-    </div>
-  </header>
-  <footer>
-    <div class="author">
-      Official website:
-      <a href="http://{{.Website}}">{{.Website}}</a> /
-      Contact me:
-      <a class="email" href="mailto:{{.Email}}">{{.Email}}</a>
-    </div>
-  </footer>
-  <div class="backdrop"></div>
-
-  <script src="/static/js/reload.min.js"></script>
-</body>
+  <head>
+    <script src="assets/js/index.js"></script>
+    <title>{{.Title}}</title>
+  </head>
+  <body>
+    <h1>{{.Title}}</h1>
+    <form class="js-form" action="user/create" method="post">
+      <p>
+      <label for="name">名前</label>
+      <input type="text" name="name">
+      </p>
+      <p>
+      <label for="email">メールアドレス</label>
+      <input type="email" name="email">
+      </p>
+      <p>
+      <input type="submit" value="送信">
+      </p>
+    </form>
+    <div id="result"></div>
+  </body>
 </html>
